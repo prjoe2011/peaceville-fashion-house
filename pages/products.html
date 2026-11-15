@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceville Fashion House | Products</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PEACEVILLE FASHION HOUSE</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="board.html">Board of Trustees</a></li>
+                <li><a href="events.html">Upcoming Events</a></li>
+                <li><a href="inquiries.html">Inquiries & Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="marquee-bar">
+        <marquee behavior="scroll" direction="left">
+            UPCOMING EVENT: Peaceville Autumn Runway Showcase — November 28, 2026 | Book your private styling appointment today! | 15% off first bespoke order.
+        </marquee>
+    </div>
+
+    <main>
+        <h1>Our Collections</h1>
+        <p>Filter our signature pieces by category:</p>
+        
+        <div style="margin: 15px 0;">
+            <button class="btn" onclick="filterProducts('all')">All</button>
+            <button class="btn" onclick="filterProducts('apparel')">Apparel</button>
+            <button class="btn" onclick="filterProducts('accessories')">Accessories</button>
+        </div>
+
+        <div class="grid-container">
+            <div class="card product-item" data-category="apparel">
+                <img src="../images/member6.jpg.jpg" alt="Silk Evening Gown">
+                <h3>Grassgreen Silk Gown</h3>
+                <p>Hand-draped emerald silk evening dress.</p>
+                <p><strong>₦85,000</strong></p>
+            </div>
+
+            <div class="card product-item" data-category="apparel">
+                <img src="../images/member7.jpg.jpg" alt="Tailored Suit">
+                <h3>Peaceville Heritage Blazer</h3>
+                <p>Bespoke woven wool-blend structured jacket.</p>
+                <p><strong>₦40,000</strong></p>
+            </div>
+
+            <div class="card product-item" data-category="accessories">
+                <img src="../images/member8.jpg.jpg" alt="Leather Handbag">
+                <h3>Peaceville Structured Tote</h3>
+                <p>Full-grain leather handbag with brass hardware.</p>
+                <p><strong>₦95,000</strong></p>
+            </div>
+
+            <div class="card product-item" data-category="accessories">
+                <img src="../images/member9.jpg.jpg" alt="Sunglasses">
+                <h3>Solstice Acetate Frames</h3>
+                <p>UV400 polarized lenses in tortoiseshell finish.</p>
+                <p><strong>₦45,000</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peaceville Fashion House. IFT 203 Project.</p>
+    </footer>
+
+        <script src="../js/script.js"></script>
+</body>
+</html>

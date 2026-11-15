@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceville Fashion House | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PEACEVILLE FASHION HOUSE</div>
+        <nav>
+           <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/products.html">Products</a></li>
+                <li><a href="pages/board.html">Board of Trustees</a></li>
+                <li><a href="pages/events.html">Upcoming Events</a></li>
+                <li><a href="pages/inquiries.html">Inquiries & Appointments</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class="marquee-bar">
+        <marquee behavior="scroll" direction="left">
+            UPCOMING EVENT: Peaceville Autumn Runway Showcase — November 28, 2026 | Book your private styling appointment today! | 15% off first bespoke order.
+        </marquee>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1 id="welcome-heading">Elegance Redefined</h1>
+            <p>Modern African luxury blended with timeless contemporary tailoring.</p>
+            <a href="pages/products.html" class="btn">Explore Collection</a>
+        </section>
+
+        <section>
+            <h2>About Peaceville Fashion House</h2>
+            <p>Founded by a collective of visionary designers, Peaceville Fashion House crafts bespoke apparel, luxury ready-to-wear pieces, and handcrafted accessories for clients who value bold silhouettes and sustainable fabrics.</p>
+            <br>
+            <div class="card" style="text-align: left;">
+                <h3>Daily Fashion Tip</h3>
+                <p id="fashion-tip">Click the button below for a curated styling tip from our creative directors.</p>
+                <button class="btn" onclick="generateTip()">Get Styling Tip</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peaceville Fashion House. IFT 203 Project.</p>
+    </footer>
+
+    <script>
+        // JS Feature 1: Time-based greeting
+        const hour = new Date().getHours();
+        const heading = document.getElementById("welcome-heading");
+        if (hour < 12) {
+            heading.innerText = "Good Morning — Welcome to Peaceville Fashion House";
+        } else if (hour < 18) {
+            heading.innerText = "Good Afternoon — Elegance Redefined";
+        } else {
+            heading.innerText = "Good Evening — Discover Luxury Fashion";
+        }
+
+        // JS Feature 2: Random styling tip generator
+        const tips = [
+            "Pair structured blazers with relaxed linen trousers for effortless smart-casual balance.",
+            "Monochrome outfits create an elongated, sophisticated silhouette.",
+            "Let one statement accessory—like a gold cuff or structured tote—anchor a neutral outfit.",
+            "Tailoring is everything: a well-fitted mid-range piece always outshines an ill-fitting luxury item."
+        ];
+
+        function generateTip() {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            document.getElementById("fashion-tip").innerText = tips[randomIndex];
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

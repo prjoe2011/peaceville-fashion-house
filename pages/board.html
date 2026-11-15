@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceville Fashion House | Board of Trustees</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PEACEVILLE FASHION HOUSE</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="board.html" class="active">Board of Trustees</a></li>
+                <li><a href="events.html">Upcoming Events</a></li>
+                <li><a href="inquiries.html">Inquiries & Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="marquee-bar">
+        <marquee behavior="scroll" direction="left">
+            UPCOMING EVENT: Peaceville Autumn Runway Showcase — November 28, 2026 | Book your private styling appointment today! | 15% off first bespoke order.
+        </marquee>
+    </div>
+
+    <main>
+        <h1>Board of Trustees</h1>
+        <p>Meet the founding members steering the creative and business vision of Peaceville Fashion House.</p>
+
+        <div class="grid-container">
+            <!-- Member 1 -->
+            <div class="card">
+                <img src="../images/member1.jpg.jpg" alt="Member 1">
+                <h3>Ajumobi Joseph</h3>
+                <p><strong>Creative Director</strong></p>
+                <p id="bio-1" style="display:none; margin-top:10px; font-size:0.9rem;">Leads seasonal design direction and textile sourcing across West Africa.</p>
+                <button class="btn" onclick="toggleBio('bio-1')">Toggle Bio</button>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="card">
+                <img src="../images/member2.jpg.jpg" alt="Member 2">
+                <h3>Abiodun Joseph</h3>
+                <p><strong>Chief Executive Officer</strong></p>
+                <p id="bio-2" style="display:none; margin-top:10px; font-size:0.9rem;">Oversees brand strategy, international partnerships, and retail expansion.</p>
+                <button class="btn" onclick="toggleBio('bio-2')">Toggle Bio</button>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="card">
+                <img src="../images/member3.jpg.jpg" alt="Member 3">
+                <h3>Peace Darasimi</h3>
+                <p><strong>Head of Production</strong></p>
+                <p id="bio-3" style="display:none; margin-top:10px; font-size:0.9rem;">Manages quality assurance, garment construction, and artisan workshops.</p>
+                <button class="btn" onclick="toggleBio('bio-3')">Toggle Bio</button>
+            </div>
+                        <!-- Member 4 -->
+            <div class="card">
+                <img src="../images/member4.jpg.jpg" alt="Member 4 Photo">
+                <h3>Ogunji Mercy</h3>
+                <p><strong>Director of Marketing & PR</strong></p>
+                <p id="bio-4" style="display:none; margin-top:10px; font-size:0.9rem;">Directs runway showcases, media campaigns, and VIP client relations.</p>
+                <button class="btn" onclick="toggleBio('bio-4')">Toggle Bio</button>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="card">
+                <img src="../images/member5.jpg.jpg" alt="Member 5 Photo">
+                <h3>Daramola Prince</h3>
+                <p><strong>Chief Financial Officer</strong></p>
+                <p id="bio-5" style="display:none; margin-top:10px; font-size:0.9rem;">Manages budgeting, supply chain procurement, and e-commerce operations.</p>
+                <button class="btn" onclick="toggleBio('bio-5')">Toggle Bio</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peaceville Fashion House. IFT 203 Project.</p>
+    </footer>
+
+    <script>
+        // JS Feature: Show/Hide member biographies
+        function toggleBio(bioId) {
+            const bioElement = document.getElementById(bioId);
+            if (bioElement.style.display === "none") {
+                bioElement.style.display = "block";
+            } else {
+                bioElement.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

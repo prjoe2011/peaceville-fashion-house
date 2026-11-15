@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceville Fashion House | Inquiries & Appointments</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PEACEVILLE FASHION HOUSE</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="board.html">Board of Trustees</a></li>
+                <li><a href="events.html">Upcoming Events</a></li>
+                <li><a href="inquiries.html" class="active">Inquiries & Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="marquee-bar">
+        <marquee behavior="scroll" direction="left">
+            UPCOMING EVENT: Peaceville Autumn Runway Showcase — November 28, 2026 | Book your private styling appointment today! | 15% off first bespoke order.
+        </marquee>
+    </div>
+
+    <main>
+        <h1>Inquiries & Fitting Appointments</h1>
+        <p>Schedule a private measurement session or send a general inquiry to our team.</p>
+        <br>
+
+        <form id="bookingForm" onsubmit="handleBooking(event)">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="serviceType">Purpose</label>
+                <select id="serviceType">
+                    <option value="Bespoke Fitting Appointment">Bespoke Fitting Appointment</option>
+                    <option value="Bridal Consultation">Bridal Consultation</option>
+                    <option value="General Product Inquiry">General Product Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preferredDate">Preferred Date</label>
+                <input type="date" id="preferredDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" rows="4" placeholder="Tell us about the outfit or event..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit Request</button>
+        </form>
+
+        <div id="confirmationMessage" style="margin-top: 20px; font-weight: bold; color: green;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peaceville Fashion House. IFT 203 Project.</p>
+    </footer>
+
+    <script>
+        // JS Feature: Form validation and dynamic confirmation message
+        function handleBooking(event) {
+            event.preventDefault();
+            const name = document.getElementById("fullName").value;
+            const service = document.getElementById("serviceType").value;
+            const date = document.getElementById("preferredDate").value;
+
+            const msgBox = document.getElementById("confirmationMessage");
+            msgBox.innerText = `Thank you, ${name}! Your ${service} for ${date} has been received. Our concierge will email you shortly.`;
+            
+            document.getElementById("bookingForm").reset();
+        }
+    </script>
+</body>
+</html>

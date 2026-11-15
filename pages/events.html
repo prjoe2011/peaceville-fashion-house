@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceville Fashion House | Upcoming Events</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PEACEVILLE FASHION HOUSE</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="board.html">Board of Trustees</a></li>
+                <li><a href="events.html" class="active">Upcoming Events</a></li>
+                <li><a href="inquiries.html">Inquiries & Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="marquee-bar">
+        <marquee behavior="scroll" direction="left">
+            UPCOMING EVENT: Peaceville Autumn Runway Showcase — November 28, 2026 | Book your private styling appointment today! | 15% off first bespoke order.
+        </marquee>
+    </div>
+
+    <main>
+        <h1>Upcoming Events & Runway Shows</h1>
+
+        <!-- JS Feature: Live Event Countdown -->
+        <div class="card" style="background-color: #111; color: #fff; margin-bottom: 30px;">
+            <h2 style="color: #d4af37;">Next Major Showcase Countdown</h2>
+            <p id="countdown" style="font-size: 1.5rem; font-weight: bold;">Loading timer...</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="card">
+                <h3>Peaceville Autumn Runway Showcase</h3>
+                <p><strong>Date:</strong> November 28, 2026</p>
+                <p><strong>Venue:</strong> Eko Convention Centre, Victoria Island</p>
+                <p>Unveiling our 2026/2027 Evening Wear and Heritage Tailoring capsule.</p>
+                <button class="btn" onclick="rsvpEvent('Peaceville Autumn Runway Showcase')">Reserve Seat</button>
+            </div>
+
+            <div class="card">
+                <h3>Abuja Luxury Pop-Up Trunk Show</h3>
+                <p><strong>Date:</strong> December 12, 2026</p>
+                <p><strong>Venue:</strong> Transcorp Hilton, Abuja</p>
+                <p>Exclusive private fittings and early access to our holiday leather goods.</p>
+                <button class="btn" onclick="rsvpEvent('Abuja Luxury Pop-Up Trunk Show')">Reserve Seat</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Peaceville Fashion House. IFT 203 Project.</p>
+    </footer>
+
+    <script>
+        // JS Feature 1: Live Countdown to November 28, 2026
+        const eventDate = new Date("Nov 28, 2026 18:00:00").getTime();
+
+        setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }, 1000);
+
+        // JS Feature 2: Interactive RSVP Confirmation
+        function rsvpEvent(eventName) {
+            alert("Thank you! Your VIP seat reservation request for the " + eventName + " has been logged.");
+        }
+    </script>
+</body>
+</html>
